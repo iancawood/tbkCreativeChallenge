@@ -37,6 +37,10 @@
 	width: 800px;
 	margin: 50px auto;
 
+	color: @color-black;
+	font-family: @font-text;
+	font-size: 14px;
+
 	.close {
 		position: absolute;
 		top: 15px;
@@ -55,6 +59,10 @@
 }
 
 .bottom {
+	padding: 50px 0;
+
+	color: @color-white;
+
 	background-color: @color-accent;
 }
 
@@ -65,5 +73,64 @@
 	.inner {
 		float: none;
 		display: inline-block;
+	}
+}
+
+.bottom-title {
+	margin-bottom: 20px;
+
+	line-height: 1.3em;
+
+	span {
+		font-family: @font-title;
+		text-transform: uppercase;
+		font-size: 22px;
+	}
+}
+
+.form div {
+	padding: 0px 3px;
+}
+
+.input-field {
+	padding: 0 10px;
+	width: 100%;
+
+	color: @color-black;
+}
+
+.button {
+	padding: 0 25px;
+
+	color: @color-white;
+	font-family: @font-title;
+	text-transform: uppercase;
+
+	background-color: @color-black;
+}
+
+.input-field,
+.button {
+	height: 40px;
+
+	border: none;
+}
+
+.checkbox-area {
+	position: relative;
+
+	padding: 0 45px;
+	margin-top: 20px;
+
+	text-align: left;
+	font-size: 12px;
+	line-height: 1em;
+
+	.checkbox {
+		position: absolute;
+		top: -3px;
+		left: 30px;
+
+		height: auto;
 	}
 }

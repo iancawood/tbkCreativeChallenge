@@ -17,6 +17,9 @@
   position: relative;
   width: 800px;
   margin: 50px auto;
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 14px;
 }
 .modal-box .close {
   position: absolute;
@@ -31,6 +34,8 @@
   margin-bottom: 0;
 }
 .bottom {
+  padding: 50px 0;
+  color: #ffffff;
   background-color: #9f173d;
 }
 .top,
@@ -41,4 +46,47 @@
 .bottom .inner {
   float: none;
   display: inline-block;
+}
+.bottom-title {
+  margin-bottom: 20px;
+  line-height: 1.3em;
+}
+.bottom-title span {
+  font-family: serif;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.form div {
+  padding: 0px 3px;
+}
+.input-field {
+  padding: 0 10px;
+  width: 100%;
+  color: #000000;
+}
+.button {
+  padding: 0 25px;
+  color: #ffffff;
+  font-family: serif;
+  text-transform: uppercase;
+  background-color: #000000;
+}
+.input-field,
+.button {
+  height: 40px;
+  border: none;
+}
+.checkbox-area {
+  position: relative;
+  padding: 0 45px;
+  margin-top: 20px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1em;
+}
+.checkbox-area .checkbox {
+  position: absolute;
+  top: -3px;
+  left: 30px;
+  height: auto;
 }
