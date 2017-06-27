@@ -10,9 +10,7 @@ $(document).ready(function() {
 			$(".pop-up").fadeOut("slow");
 		};
 
-		$(".pop-up .close").on("click", function() {
-			closePopup();
-		});
+		$(".pop-up .close").on("click", closePopup);
 
 		$('.pop-up .form').submit(function(e){
 			e.preventDefault();
@@ -21,7 +19,11 @@ $(document).ready(function() {
 
 			closePopup();
 		});
+
+		$(document).keyup(function(e) {
+			if (e.keyCode == 27) { // esc
+				closePopup();
+			}
+		});
 	}
-
-
 });
