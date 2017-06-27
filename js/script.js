@@ -25,5 +25,21 @@ $(document).ready(function() {
 				closePopup();
 			}
 		});	
+
+		var sensitivity = 0.6;
+		var prevScrollTop = 0;
+		var shaving = $(".shaving");
+		var chisel = $(".chisel");
+
+		$(window).scroll(function(event){
+
+			var scrollTop = $(this).scrollTop();
+			var scrollIncrement = (scrollTop - prevScrollTop) * sensitivity;
+
+			shaving.css("top", parseFloat(shaving.css("top")) + scrollIncrement + "px");
+			chisel.css("top", parseFloat(chisel.css("top")) - scrollIncrement + "px");
+
+			prevScrollTop = scrollTop;
+		});
 	}
 });
