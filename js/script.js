@@ -1,17 +1,27 @@
 $(document).ready(function() {
-	setTimeout(function() {
-		$(".pop-up").fadeIn("slow");
- 	}, 3000);
+	if (localStorage.getItem('companyNamePopupViewed') == null) {
+		localStorage.setItem('companyNamePopupViewed', 1);
 
- 	$(".pop-up .close").on("click", function() {
- 		$(".pop-up").fadeOut("slow");
- 	});
+		setTimeout(function() {
+			$(".pop-up").fadeIn("slow");
+		}, 3000);
 
- 	$('.pop-up .form').submit(function(e){
-    	e.preventDefault();
+		var closePopup = function() {
+			$(".pop-up").fadeOut("slow");
+		};
 
-    	// AJAX
+		$(".pop-up .close").on("click", function() {
+			closePopup();
+		});
 
-    	$(".pop-up").fadeOut("slow");
-    });
+		$('.pop-up .form').submit(function(e){
+			e.preventDefault();
+
+			// AJAX
+
+			closePopup();
+		});
+	}
+
+
 });
