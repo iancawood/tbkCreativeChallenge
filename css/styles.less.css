@@ -1,5 +1,5 @@
 .main-page {
-  height: 100vh;
+  height: 200vh;
   text-align: center;
   font-size: 50px;
   line-height: 100vh;
@@ -10,7 +10,7 @@
   right: 0;
   left: 0;
   z-index: 100;
-  height: 100vh;
+  height: 200vh;
   background: rgba(0, 0, 0, 0.5);
 }
 .modal-box {
@@ -30,16 +30,63 @@
 .top {
   background-color: #ffffff;
 }
-.top .list {
+.title .thin {
+  font-family: monospace;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.title .fancy {
+  padding: 15px 0;
+  font-family: cursive;
+  font-size: 16 	px;
+}
+.title .large {
+  font-family: serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+.title .large span {
+  color: #9f173d;
+}
+.main-text {
+  margin-top: 40px;
+}
+.main-text::after {
+  content: " ";
+  margin: 20px auto;
+  display: block;
+  width: 150px;
+  height: 1px;
+  background-color: #9f173d;
+}
+.sneak-peek span {
+  font-family: monospace;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.sneak-peek .list {
   margin-bottom: 0;
+  margin-top: 20px;
+  padding: 0 40px;
+  text-align: left;
+}
+.sneak-peek li {
+  list-style-type: none;
+  padding-left: 5px;
+}
+.sneak-peek li::before {
+  content: "\25C6";
+  color: #9f173d;
+  padding-right: 5px;
 }
 .bottom {
-  padding: 50px 0;
   color: #ffffff;
   background-color: #9f173d;
 }
 .top,
 .bottom {
+  padding: 50px;
   text-align: center;
 }
 .top .inner,
