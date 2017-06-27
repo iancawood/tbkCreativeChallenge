@@ -3,6 +3,7 @@
 @color-white: #fff;
 @color-black: #000;
 @color-border: #f4f4f4;
+@color-black-translucent: rgba(0, 0, 0, 0.5);
 
 @font-text: sans-serif;
 @font-fancy: cursive;
@@ -18,3 +19,51 @@
 	line-height: 100vh;
 }
 
+.pop-up {
+	position: absolute;
+	top: 0;
+    right: 0;
+    left: 0;
+	z-index: 100;
+
+	height: 100vh;
+
+    background: @color-black-translucent;
+}
+
+.modal-box {
+	position: relative;
+
+	width: 800px;
+	margin: 50px auto;
+
+	.close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+
+		color: @color-accent;
+	}
+}
+
+.top {
+	background-color: @color-white;
+
+	.list {
+		margin-bottom: 0;
+	}
+}
+
+.bottom {
+	background-color: @color-accent;
+}
+
+.top, 
+.bottom {
+	text-align: center;
+
+	.inner {
+		float: none;
+		display: inline-block;
+	}
+}
